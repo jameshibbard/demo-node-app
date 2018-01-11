@@ -1,4 +1,4 @@
-# Building a simple beginner app with Node, Bootstrap & MongoDB
+# Building a Simple Beginner App with Node, Bootstrap & MongoDB
 
 The code for the following [SitePoint article](LINK_HERE).
 
