@@ -1,6 +1,6 @@
 # Building a Simple Beginner App with Node, Bootstrap & MongoDB
 
-The code for the following [SitePoint article](LINK_HERE).
+The code for the following [SitePoint article](https://www.sitepoint.com/build-simple-beginner-app-node-bootstrap-mongodb/).
 
 ## Requirements
 
