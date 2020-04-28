@@ -43,7 +43,7 @@ router.post('/',
     }
   });
 
-router.get('/registrations', auth.connect(basic), (req, res) => {
+router.get('/registrations', basic.check((req, res) => {
   Registration.find()
     .then((registrations) => {
       res.render('index', { title: 'Listing registrations', registrations });
@@ -52,6 +52,7 @@ router.get('/registrations', auth.connect(basic), (req, res) => {
       console.log(err);
       res.send('Sorry! Something went wrong.');
     });
-});
+}));
 
 module.exports = router;
+
