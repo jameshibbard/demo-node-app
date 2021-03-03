@@ -16,7 +16,7 @@
     "express-validator": "^6.4.0",
     "http-auth": "^4.1.2",
     "mongoose": "^5.9.10",
-    "pug": "^2.0.4"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
