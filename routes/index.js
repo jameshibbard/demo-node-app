@@ -2,10 +2,12 @@ const auth = require('http-auth');
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+
 const { check, validationResult } = require('express-validator');
 
 const router = express.Router();
 const Registration = mongoose.model('Registration');
+
 const basic = auth.basic({
   file: path.join(__dirname, '../users.htpasswd'),
 });
@@ -41,7 +43,8 @@ router.post('/',
         data: req.body,
       });
     }
-  });
+  }
+);
 
 router.get('/registrations', basic.check((req, res) => {
   Registration.find()
@@ -49,10 +52,9 @@ router.get('/registrations', basic.check((req, res) => {
       res.render('index', { title: 'Listing registrations', registrations });
     })
     .catch((err) => {
-      console.log(err);
+      console.warn(err);
       res.send('Sorry! Something went wrong.');
     });
 }));
 
 module.exports = router;
-

@@ -3,10 +3,12 @@ extends layout
 block content
 
   if registrations.length
-    table.listing-table.table-dark.table-striped
-      tr
-        th Name
-        th Email
+    table.table.table-bordered.table-striped.mt-5
+      thead.table-dark
+        tr
+         th Name
+         th Email
+      tbody
       each registration in registrations
         tr
           td= registration.name
